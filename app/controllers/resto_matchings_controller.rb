@@ -1,0 +1,2 @@
+class RestoMatchingsController < ApplicationController
+end

@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_25_183928) do
+ActiveRecord::Schema.define(version: 2021_01_25_194154) do
 
   create_table "matchings", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "resto_matching_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "restaurant_id"
-    t.string "restaurant_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -23,20 +29,25 @@ ActiveRecord::Schema.define(version: 2021_01_25_183928) do
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "type"
-    t.integer "matching_id", null: false
+    t.string "cuisine"
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["matching_id"], name: "index_restaurants_on_matching_id"
+  end
+
+  create_table "resto_matchings", force: :cascade do |t|
+    t.integer "restaurant_id"
+    t.integer "matching_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "user_name"
     t.integer "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "restaurants", "matchings"
 end
