@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_01_25_194154) do
     t.string "name"
     t.string "location"
     t.string "cuisine"
+    t.string "img_url"
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
