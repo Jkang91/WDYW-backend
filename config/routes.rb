@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get "/matchings", to: "matchings#index"
   post "/matching", to: "matchings#create"
+  post "/resto_matching", to: "resto_matchings#create"
   patch "/restaurant/:id", to: "restaurants#update"
 
   delete "matching/:id", to: "matchings#destroy"

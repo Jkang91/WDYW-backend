@@ -17,7 +17,7 @@ class MatchingsController < ApplicationController
     end
     
     def matching_params
-        params.permit(:restaurant_id, :resto_matching_id)
+        params.permit(:user_id)
     end
 
 end

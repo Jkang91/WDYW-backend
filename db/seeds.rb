@@ -50,14 +50,13 @@ Restaurant.create(name: "Eataly",location: "Italy", cuisine: "Italian", rating: 
 Restaurant.create(name: "Peeking Duck House",location: "Chinatown", cuisine: "Chinese", rating: 4, img_url: "https://image.ibb.co/gQsq07/Adventure_and_Outdoor.png")
 
 
-m1 = Matching.create(user_id: 1, resto_matching_id: 1)
+m1 = Matching.create(user_id: 1)
 
 RestoMatching.create(restaurant_id: 2, matching_id: m1.id)
 RestoMatching.create(restaurant_id: 3, matching_id: m1.id)
 RestoMatching.create(restaurant_id: 4, matching_id: m1.id)
 RestoMatching.create(restaurant_id: 5, matching_id: m1.id)
 RestoMatching.create(restaurant_id: 6, matching_id: m1.id)
-
 
 
 
