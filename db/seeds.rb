@@ -11,9 +11,9 @@ Restaurant.destroy_all
 Matching.destroy_all
 RestoMatching.destroy_all
 
-User.create(name:"June" , user_name:"jkang91" ,age:5 )
-User.create(name:"Jaime" , user_name:"jaime01" ,age:30 )
-User.create(name:"Stranger" , user_name:"danger" ,age:70 )
+User.create(user_name:"jkang91")
+User.create(user_name:"jaime01")
+User.create(user_name:"danger")
 
 
 # Restaurant.create(name: , location:, cuisine:, rating: )
@@ -58,5 +58,6 @@ RestoMatching.create(restaurant_id: 4, matching_id: m1.id)
 RestoMatching.create(restaurant_id: 5, matching_id: m1.id)
 RestoMatching.create(restaurant_id: 6, matching_id: m1.id)
 
+puts "seeded"
 
 
