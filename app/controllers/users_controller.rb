@@ -11,12 +11,12 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        @user = User.find_by(user_name: params[:name])
+        @user = User.find_by(user_name: params[:user_name])
         @user.destroy!
         render json: {}
     end
 
     def user_params
-        params.permit(:name, :user_name, :age)
+        params.permit(:user_name)
     end
 end

@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2021_01_25_194154) do
 
   create_table "matchings", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "resto_matching_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
